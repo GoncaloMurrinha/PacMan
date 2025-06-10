@@ -25,7 +25,7 @@ import java.awt.Color;
 
 public class pmanc extends JFrame {
 	public int score=0;
-	
+
 	boolean start=false;
 	boolean parede=true;
 	int tentativa=0;
@@ -36,9 +36,9 @@ public class pmanc extends JFrame {
 	private JPanel contentPane;
 	private JLabel DOT39;
 	private Timer timer;
-	private Aux tarefaAux;
+	public Aux tarefaAux;
 	private boolean emPause = false;
-// ...
+
 
 	int total;
 	int u=0;
@@ -136,6 +136,555 @@ public class pmanc extends JFrame {
 	 * Create the frame.
 	
 	 */
+	class Aux extends TimerTask{
+		private int life=0;
+		private boolean andar2=true;
+
+		@Override
+		public void run() {
+			secor.setText(""+score);
+
+			// TODO Auto-generated method stub
+			if (start && !emPause) {
+
+				if (andar) {
+
+					if(Ghost.getLocation().y>25 && Ghost3.getLocation().y>456) {
+
+
+
+
+						andar=false;
+
+
+
+
+					}
+					else {
+
+
+
+						Ghost.setLocation(Ghost.getLocation().x, Ghost.getLocation().y+10);
+						Ghost3.setLocation(Ghost3.getLocation().x, Ghost3.getLocation().y+10);
+					}
+
+
+
+				}
+				else {
+
+					if(Ghost.getLocation().y<455 && Ghost3.getLocation().y<26) {
+
+
+
+						andar=true;
+
+
+
+					}
+					else {
+
+
+
+						Ghost.setLocation(Ghost.getLocation().x, Ghost.getLocation().y-10);
+						Ghost3.setLocation(Ghost3.getLocation().x, Ghost3.getLocation().y-10);
+					}
+
+
+
+				}
+
+
+				if (andar2) {
+
+					if(Ghost2.getLocation().x<45 && Ghost4.getLocation().x<790) {
+
+
+
+						andar2=false;
+
+
+
+					}
+					else {
+
+
+
+						Ghost2.setLocation(Ghost2.getLocation().x-10, Ghost2.getLocation().y);
+						Ghost4.setLocation(Ghost4.getLocation().x-10, Ghost4.getLocation().y);
+					}
+
+
+
+				}
+
+				else {
+
+					if(Ghost2.getLocation().x>785 && Ghost4.getLocation().x>50) {
+
+
+
+						andar2=true;
+
+
+
+					}
+					else {
+
+
+
+						Ghost2.setLocation(Ghost2.getLocation().x+10, Ghost2.getLocation().y);
+						Ghost4.setLocation(Ghost4.getLocation().x+10, Ghost4.getLocation().y);
+					}
+
+
+
+				}
+				if(choque((JLabel)pacman,DOT39)) {
+					DOT39.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT39.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT38)) {
+					DOT38.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT38.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT37)) {
+					DOT37.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT37.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT36)) {
+					DOT36.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT36.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT35)) {
+					DOT35.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT35.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT34)) {
+					DOT34.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT34.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT33)) {
+					DOT33.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT33.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT32)) {
+					DOT32.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT32.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT31)) {
+					DOT31.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT31.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT30)) {
+					DOT30.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT30.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT29)) {
+					DOT29.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT29.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT28)) {
+					DOT28.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT28.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT27)) {
+					DOT27.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT27.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT26)) {
+					DOT26.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT26.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT25)) {
+					DOT25.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT25.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT24)) {
+					DOT24.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT24.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT23)) {
+					DOT23.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT23.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT22)) {
+					DOT22.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT22.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT21)) {
+					DOT21.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT21.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT20)) {
+					DOT20.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT20.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT19)) {
+					DOT19.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT19.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT18)) {
+					DOT18.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT18.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT17)) {
+					DOT17.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT17.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT16)) {
+					DOT16.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT16.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT15)) {
+					DOT15.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT15.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT14)) {
+					DOT14.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT14.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT13)) {
+					DOT13.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT13.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT12)) {
+					DOT12.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT12.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT11)) {
+					DOT11.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT11.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT10)) {
+					DOT10.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT10.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT9)) {
+					DOT9.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT9.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT8)) {
+					DOT8.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT8.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT7)) {
+					DOT7.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT7.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT6)) {
+					DOT6.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT6.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT5)) {
+					DOT5.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT5.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT4)) {
+					DOT4.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT4.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT3)) {
+					DOT3.setVisible(false);
+					score+=10;
+					u+=1;
+					DOT3.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT2)) {
+					DOT2.setVisible(false);
+					u+=1;
+					DOT2.setLocation(-100, -100);
+
+				}
+				if(choque((JLabel)pacman,DOT1)) {
+					DOT1.setVisible(false);
+					u+=1;
+					DOT1.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,DOT)) {
+					DOT.setVisible(false);
+					u+=1;
+					DOT.setLocation(-100, -100);
+				}
+				if(choque((JLabel)pacman,Ghost4)) {
+					life=life+1;
+					tentativa=tentativa+1;
+				}
+				if(choque((JLabel)pacman,Ghost3)) {
+					life=life+1;
+					tentativa=tentativa+1;
+				}
+				if(choque((JLabel)pacman,Ghost2)) {
+					life=life+1;
+					tentativa=tentativa+1;
+				}
+				if(choque((JLabel)pacman,Ghost)) {
+					life=life+1;
+					tentativa=tentativa+1;
+				}
+
+				if (choque(pacman,canto_1)) {
+
+					pacman.setLocation(pacman.getLocation().x+750, pacman.getLocation().y);
+
+					pacman.setIcon(new ImageIcon(pmanc.class.getResource("/imagens/LEFT.gif")));
+				}
+				if (choque(pacman,canto_2)) {
+
+					pacman.setLocation(pacman.getLocation().x=40, pacman.getLocation().y);
+
+					pacman.setIcon(new ImageIcon(pmanc.class.getResource("/imagens/RIGHT.gif")));
+				}
+
+
+
+
+				System.out.println(tentativa);
+
+				if(u==40) {
+					JFrame frame = new JFrame("Bem Jogado!");
+
+					JOptionPane.showMessageDialog(frame,"Bem Jogado!");
+
+					u+=1;
+
+				}
+				if(u==41) {
+
+					u+=1;
+
+					timer.cancel();
+
+					Win win=new Win() ;
+
+					win.setVisible(true);
+
+					dispose();
+				}
+
+
+
+				if (choque(pacman,Ghost4)&&tentativa>=1 && tentativa<=2) {
+
+					if(tentativa==1) {
+						coração1.setVisible(false);
+					}
+					if(tentativa==2) {
+						coração2.setVisible(false);
+					}
+
+					JFrame frame = new JFrame("Boa Tentativa!");
+
+					pacman.setLocation(410,310);
+
+					JOptionPane.showMessageDialog(frame,"Recomece!");
+
+
+				}
+				else if(tentativa>3) {
+
+
+					if (choque(pacman,Ghost4) && life>=3) {
+						coração3.setVisible(false);
+						timer.cancel();
+
+						gameover go=new gameover();
+						go.setVisible(true);
+						dispose();
+
+
+
+					}
+				}
+				if (choque(pacman,Ghost2)&&tentativa>=1 && tentativa<=2) {
+
+					if(tentativa==1) {
+						coração1.setVisible(false);
+					}
+					if(tentativa==2) {
+						coração2.setVisible(false);
+					}
+
+
+					JFrame frame = new JFrame("Boa Tentativa!");
+
+					pacman.setLocation(417,318);
+
+					JOptionPane.showMessageDialog(frame,"Recomece!");
+
+
+				}
+				else if(tentativa>3) {
+
+
+					if (choque(pacman,Ghost2) && life>=3) {
+
+						coração3.setVisible(false);
+
+						timer.cancel();
+
+						gameover go=new gameover();
+						go.setVisible(true);
+						dispose();
+
+					}}
+				if (choque(pacman,Ghost3)&&tentativa>=1 && tentativa<=2) {
+
+					if(tentativa==1) {
+						coração1.setVisible(false);
+					}
+					if(tentativa==2) {
+						coração2.setVisible(false);
+					}
+
+
+					JFrame frame = new JFrame("Boa Tentativa!");
+
+					pacman.setLocation(417,318);
+
+					JOptionPane.showMessageDialog(frame,"Recomece!");
+
+
+				}
+				else if(tentativa>3) {
+
+
+					if (choque(pacman,Ghost3) && life>=3) {
+						coração3.setVisible(false);
+						timer.cancel();
+
+						gameover go=new gameover();
+						go.setVisible(true);
+						dispose();
+
+
+					}
+				}
+
+				if (choque(pacman,Ghost)&&tentativa>=1 && tentativa<=2) {
+
+					if(tentativa==1) {
+						coração1.setVisible(false);
+					}
+					if(tentativa==2) {
+						coração2.setVisible(false);
+					}
+
+
+					JFrame frame = new JFrame("Boa Tentativa!");
+
+					pacman.setLocation(417,318);
+
+					JOptionPane.showMessageDialog(frame,"Recomece!");
+
+
+				}
+				else if(tentativa>3) {
+
+
+					if (choque(pacman,Ghost) && life>=3) {
+
+
+						timer.cancel();
+
+						gameover go=new gameover();
+						go.setVisible(true);
+						dispose();
+
+					}
+				}
+
+
+				for (Component c : contentPane.getComponents()) {
+
+					if (c instanceof JLabel) {
+
+						if( choque((JLabel)c,pacman) ) {
+
+							System.out.println("choque");
+
+						}
+
+					}
+				}
+
+			}
+		}
+
+	}
+
 	public pmanc() {
 		
 		
@@ -651,14 +1200,7 @@ public class pmanc extends JFrame {
 		
 		
 		addKeyListener(new KeyAdapter() {
-			public void retomarJogo() {
-				if (emPause) {
-					timer = new javax.swing.Timer();
-					tarefaAux = new Aux();
-					timer.scheduleAtFixedRate(tarefaAux, 0, 1000);
-					emPause = false;
-				}
-			}
+
 			@Override
 			public void keyPressed(KeyEvent e) {
 				start=true;
@@ -770,563 +1312,22 @@ public class pmanc extends JFrame {
 		});	
 		
 		Timer timer = new Timer();
-	}
-		class Aux extends TimerTask{
-			private int life=0;
-			private boolean andar2=true;
 
-			@Override
-			public void run() {
-				secor.setText(""+score);
 
-				// TODO Auto-generated method stub
-				if (start && !emPause) {
 
-				if (andar) {
-
-					if(Ghost.getLocation().y>25 && Ghost3.getLocation().y>456) {
-
-
-
-
-						andar=false;
-
-
-
-
-					}
-					else {
-
-
-
-					Ghost.setLocation(Ghost.getLocation().x, Ghost.getLocation().y+10);
-					Ghost3.setLocation(Ghost3.getLocation().x, Ghost3.getLocation().y+10);
-					}
-
-
-
-				}
-				else {
-
-					if(Ghost.getLocation().y<455 && Ghost3.getLocation().y<26) {
-
-
-
-						andar=true;
-
-
-
-					}
-					else {
-
-
-
-						Ghost.setLocation(Ghost.getLocation().x, Ghost.getLocation().y-10);
-						Ghost3.setLocation(Ghost3.getLocation().x, Ghost3.getLocation().y-10);
-					}
-
-
-
-				}
-
-
-				if (andar2) {
-
-					if(Ghost2.getLocation().x<45 && Ghost4.getLocation().x<790) {
-
-
-
-						andar2=false;
-
-
-
-					}
-					else {
-
-
-
-					Ghost2.setLocation(Ghost2.getLocation().x-10, Ghost2.getLocation().y);
-					Ghost4.setLocation(Ghost4.getLocation().x-10, Ghost4.getLocation().y);
-					}
-
-
-
-				}
-
-				else {
-
-					if(Ghost2.getLocation().x>785 && Ghost4.getLocation().x>50) {
-
-
-
-						andar2=true;
-
-
-
-					}
-					else {
-
-
-
-						Ghost2.setLocation(Ghost2.getLocation().x+10, Ghost2.getLocation().y);
-						Ghost4.setLocation(Ghost4.getLocation().x+10, Ghost4.getLocation().y);
-					}
-
-
-
-				}
-				if(choque((JLabel)pacman,DOT39)) {
-			    	DOT39.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT39.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT38)) {
-			    	DOT38.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT38.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT37)) {
-			    	DOT37.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT37.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT36)) {
-			    	DOT36.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT36.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT35)) {
-			    	DOT35.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT35.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT34)) {
-			    	DOT34.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT34.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT33)) {
-			    	DOT33.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT33.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT32)) {
-			    	DOT32.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT32.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT31)) {
-			    	DOT31.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT31.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT30)) {
-			    	DOT30.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT30.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT29)) {
-			    	DOT29.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT29.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT28)) {
-			    	DOT28.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT28.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT27)) {
-			    	DOT27.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT27.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT26)) {
-			    	DOT26.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT26.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT25)) {
-			    	DOT25.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT25.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT24)) {
-			    	DOT24.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT24.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT23)) {
-			    	DOT23.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT23.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT22)) {
-			    	DOT22.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT22.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT21)) {
-			    	DOT21.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT21.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT20)) {
-			    	DOT20.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT20.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT19)) {
-			    	DOT19.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT19.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT18)) {
-			    	DOT18.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT18.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT17)) {
-			    	DOT17.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT17.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT16)) {
-			    	DOT16.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT16.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT15)) {
-			    	DOT15.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT15.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT14)) {
-			    	DOT14.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT14.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT13)) {
-			    	DOT13.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT13.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT12)) {
-			    	DOT12.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT12.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT11)) {
-			    	DOT11.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT11.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT10)) {
-			    	DOT10.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT10.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT9)) {
-			    	DOT9.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT9.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT8)) {
-			    	DOT8.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT8.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT7)) {
-			    	DOT7.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT7.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT6)) {
-			    	DOT6.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT6.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT5)) {
-			    	DOT5.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT5.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT4)) {
-			    	DOT4.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT4.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT3)) {
-			    	DOT3.setVisible(false);
-			    	score+=10;
-			    	u+=1;
-			    	DOT3.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT2)) {
-			    	DOT2.setVisible(false);
-			    	u+=1;
-			    	DOT2.setLocation(-100, -100);
-
-			    }
-				if(choque((JLabel)pacman,DOT1)) {
-			    	DOT1.setVisible(false);
-			    	u+=1;
-			    	DOT1.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,DOT)) {
-			    	DOT.setVisible(false);
-			    	u+=1;
-			    	DOT.setLocation(-100, -100);
-			    }
-				if(choque((JLabel)pacman,Ghost4)) {
-			    	life=life+1;
-			    	tentativa=tentativa+1;
-			    }
-				if(choque((JLabel)pacman,Ghost3)) {
-			    	life=life+1;
-			    	tentativa=tentativa+1;
-			    }
-				if(choque((JLabel)pacman,Ghost2)) {
-			    	life=life+1;
-			    	tentativa=tentativa+1;
-			    }
-				if(choque((JLabel)pacman,Ghost)) {
-					    	life=life+1;
-					    	tentativa=tentativa+1;
-					    }
-
-				if (choque(pacman,canto_1)) {
-
-					pacman.setLocation(pacman.getLocation().x+750, pacman.getLocation().y);
-
-					pacman.setIcon(new ImageIcon(pmanc.class.getResource("/imagens/LEFT.gif")));
-				}
-				if (choque(pacman,canto_2)) {
-
-					pacman.setLocation(pacman.getLocation().x=40, pacman.getLocation().y);
-
-					pacman.setIcon(new ImageIcon(pmanc.class.getResource("/imagens/RIGHT.gif")));
-				}
-
-
-
-
-				System.out.println(tentativa);
-
-				if(u==40) {
-					JFrame frame = new JFrame("Bem Jogado!");
-
-					JOptionPane.showMessageDialog(frame,"Bem Jogado!");
-
-					u+=1;
-
-				}
-			    if(u==41) {
-
-			    	u+=1;
-
-					timer.cancel();
-
-					Win win=new Win() ;
-
-					win.setVisible(true);
-
-					dispose();
-				}
-
-
-
-				if (choque(pacman,Ghost4)&&tentativa>=1 && tentativa<=2) {
-
-					if(tentativa==1) {
-						coração1.setVisible(false);
-					}
-					if(tentativa==2) {
-						coração2.setVisible(false);
-					}
-
-					JFrame frame = new JFrame("Boa Tentativa!");
-
-					  pacman.setLocation(410,310);
-
-					  JOptionPane.showMessageDialog(frame,"Recomece!");
-
-
-				}
-				else if(tentativa>3) {
-
-
-				if (choque(pacman,Ghost4) && life>=3) {
-					coração3.setVisible(false);
-					timer.cancel();
-
-					gameover go=new gameover();
-					go.setVisible(true);
-					dispose();
-
-
-
-				}
-				}
-				if (choque(pacman,Ghost2)&&tentativa>=1 && tentativa<=2) {
-
-					if(tentativa==1) {
-						coração1.setVisible(false);
-					}
-					if(tentativa==2) {
-						coração2.setVisible(false);
-					}
-
-
-					JFrame frame = new JFrame("Boa Tentativa!");
-
-					  pacman.setLocation(417,318);
-
-					  JOptionPane.showMessageDialog(frame,"Recomece!");
-
-
-				}
-				else if(tentativa>3) {
-
-
-				if (choque(pacman,Ghost2) && life>=3) {
-
-					coração3.setVisible(false);
-
-					timer.cancel();
-
-					gameover go=new gameover();
-					go.setVisible(true);
-					dispose();
-
-				}}
-				if (choque(pacman,Ghost3)&&tentativa>=1 && tentativa<=2) {
-
-					if(tentativa==1) {
-						coração1.setVisible(false);
-					}
-					if(tentativa==2) {
-						coração2.setVisible(false);
-					}
-
-
-					JFrame frame = new JFrame("Boa Tentativa!");
-
-					  pacman.setLocation(417,318);
-
-					  JOptionPane.showMessageDialog(frame,"Recomece!");
-
-
-				}
-				else if(tentativa>3) {
-
-
-				if (choque(pacman,Ghost3) && life>=3) {
-					coração3.setVisible(false);
-					timer.cancel();
-
-					gameover go=new gameover();
-					go.setVisible(true);
-					dispose();
-
-
-				}
-				}
-
-				if (choque(pacman,Ghost)&&tentativa>=1 && tentativa<=2) {
-
-					if(tentativa==1) {
-						coração1.setVisible(false);
-					}
-					if(tentativa==2) {
-						coração2.setVisible(false);
-					}
-
-
-					JFrame frame = new JFrame("Boa Tentativa!");
-
-					  pacman.setLocation(417,318);
-
-					  JOptionPane.showMessageDialog(frame,"Recomece!");
-
-
-				}
-				else if(tentativa>3) {
-
-
-				if (choque(pacman,Ghost) && life>=3) {
-
-
-					timer.cancel();
-
-					gameover go=new gameover();
-					go.setVisible(true);
-					dispose();
-
-				}
-}
-
-
-				  for (Component c : contentPane.getComponents()) {
-
-					    if (c instanceof JLabel) {
-
-					    	if( choque((JLabel)c,pacman) ) {
-
-					    		 System.out.println("choque");
-
-					    		}
-
-					    }
-				  }
-
-				}
-			}
-
-		}
-		 
 		TimerTask task = new Aux(); 
       timer.schedule(task, 50, 50);
-        
 
-
-
-			}
+	}
+	public void retomarJogo() {
+		if (emPause) {
+			timer = new Timer();
+			tarefaAux = new Aux();
+			timer.scheduleAtFixedRate(tarefaAux, 0, 1000);
+			emPause = false;
+		}
+	}
+}
 			
 	
 		
