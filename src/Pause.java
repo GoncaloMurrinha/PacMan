@@ -39,7 +39,8 @@ public class Pause extends JFrame {
         btnInicio.setFont(new Font("Segoe UI", Font.PLAIN, 18));
         btnInicio.setBounds(30, 80, 100, 45);
         btnInicio.addActionListener(e -> {
-            // Exemplo: fechar tudo e voltar ao menu principal (depende de sua implementação)
+            game ga=new game() ;
+            ga.setVisible(true);
             pmanc.dispose();
             dispose();
         });
@@ -49,7 +50,10 @@ public class Pause extends JFrame {
         btnContinue.setFont(new Font("Segoe UI", Font.PLAIN, 18));
         btnContinue.setBounds(145, 80, 120, 45);
         btnContinue.addActionListener(e -> {
-            if (pmanc != null) pmanc.retomarJogo();
+            if (pmanc != null) {
+                pmanc.paused = false; // Despausa o jogo
+                pmanc.requestFocus(); // Foca de volta no jogo
+            }
             dispose();
         });
         contentPane.add(btnContinue);
@@ -59,5 +63,18 @@ public class Pause extends JFrame {
         btnSair.setBounds(280, 80, 90, 45);
         btnSair.addActionListener(e -> System.exit(0));
         contentPane.add(btnSair);
+    }
+
+    public static void main(String[] args) {
+        // Exemplo de como criar e mostrar a janela de pausa
+        SwingUtilities.invokeLater(() -> {
+            pmanc game = new pmanc(); // Sua classe de jogo
+            game.setVisible(true);
+
+            // Em algum ponto do seu jogo, quando precisar pausar
+            Pause pauseWindow = new Pause(game);
+            pauseWindow.setVisible(true);
+            game.paused = true;
+        });
     }
 }
